@@ -15,9 +15,31 @@ li {
 a {
   text-decoration: none;
 }
+h1 {
+  font-size: 1.8em;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 10px 5px;
+}
+
+/* clearfix */
+
+#content-wrap::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* wrap */
+
+#wrap {
+  margin-top: 60px;
+}
 
 /* HEADER */
 header {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 60px;
   z-index: 2000;
@@ -45,4 +67,47 @@ nav {
 }
 .nav-items > li > a:hover {
   color: rgba(0, 0, 0, 0.8);
+}
+
+/* Content Wrap */
+
+/* Aside */
+aside {
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  width: 200px;
+  padding-top: 25px;
+  background-color: #333;
+}
+/* Aside navi */
+aside > ul {
+  width: 200px;
+}
+aside > ul > li > a {
+  display: block;
+  color: #fff;
+  padding: 10px 0 10px 20px;
+}
+aside > ul > li > a.active {
+  background-color: #4CAF50;
+}
+aside > ul > li > a:hover:not(.active) {
+  background-color: #555;
+}
+aside > h1 {
+  padding: 20px 0 20px 20px;
+  color: #fff;
+}
+
+/* Section */
+
+section {
+  float: right;
+  margin-left: 200px;
+}
+article {
+  margin: 10px;
+  padding: 25px;
+  background-color: #fff;
 }
